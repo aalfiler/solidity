@@ -1,23 +1,37 @@
-# Associate Profit Splitter
-
-### Level One:
+# Level One: Associate Profit Splitter
 
 This contract will accept Ether into the contract and divide the Ether evenly among three associate level employees. This will allow the Human Resources department to pay employees quickly and efficiently.
 
-### At the top of your contract, you will need to define the following `public` variables:
+<br/>
 
+### Data Dictionary:
+**Three payable addresses:**
+- address payable employee_one;
+- address payable employee_two;
+- address payable employee_three;
+
+**function balance():**
+- return the contract's current balance
+
+**function deposit():**
+- only the owner can call the function via `public payable`
+- calculate the split value of the Ether between the employees
+- send left over wei back to HR
+
+**function() external payable:**
+- enforce that the `deposit` function is called in the fallback function
+
+<br/>
 
 #### Test the contract
 
-In the `Deploy` tab in Remix, deploy the contract to your local Ganache chain by connecting to `Injected Web3` and ensuring MetaMask is pointed to `localhost:8545`.
+Deployed the contract to my local Ganache chain by connecting to `Injected Web3` and ensuring MetaMask is pointed to `localhost:8545`.
 
-You will need to fill in the constructor parameters with your designated `employee` addresses.
+![Local Host](Images/localHost_test.png)
 
-Test the `deposit` function by sending various values. Keep an eye on the `employee` balances as you send different amounts of Ether to the contract and ensure the logic is executing properly.
+<br /> 
 
-![Remix Testing](Images/remix-test.png)
-
-### Deploy the contracts to a live Testnet
+#### Deploy the contracts to a live Testnet
 
 Once you feel comfortable with your contracts, point MetaMask to the Kovan or Ropsten network. Ensure you have test Ether on this network!
 

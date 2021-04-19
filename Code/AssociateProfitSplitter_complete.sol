@@ -1,6 +1,8 @@
 pragma solidity ^0.5.0;
 
-// lvl 1: equal split
+// Level 1: Equal Split
+// This contract will accept Ether into the contract and divide the Ether evenly among three associate level employees
+
 contract AssociateProfitSplitter {
     // Create three payable addresses representing `employee_one`, `employee_two` and `employee_three`.
       address payable employee_one;
@@ -26,8 +28,8 @@ contract AssociateProfitSplitter {
         employee_two.transfer(amount);
         employee_three.transfer(amount);
 
-        // @TODO: take care of a potential remainder by sending back to HR (`msg.sender`)
-        // Your code here!
+        // Take care of a potential remainder by sending back to HR (`msg.sender`)
+        msg.sender.transfer(msg.value - amount*3);
     }
     
     function() external payable {
