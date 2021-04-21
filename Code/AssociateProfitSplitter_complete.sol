@@ -8,18 +8,25 @@ contract AssociateProfitSplitter {
       address payable employee_one;
       address payable employee_two;
       address payable employee_three;
+      address payable owner;
+      
+    modifier onlyOwner {
+        require(msg.sender == owner, "You do not have permission to mint these tokens!");
+        _;
+    }
 
     constructor(address payable _one, address payable _two, address payable _three) public {
         employee_one = _one;
         employee_two = _two;
         employee_three = _three;
+        owner = msg.sender;
     }
 
     function balance() public view returns(uint) {
         return address(this).balance;
     }
 
-    function deposit() public payable {
+    function deposit() public payable onlyOwner{
         // Split `msg.value` into three
         uint amount = msg.value / 3;
 

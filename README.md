@@ -5,10 +5,11 @@ This contract will accept Ether into the contract and divide the Ether evenly am
 <br/>
 
 ### Data Dictionary:
-**Three payable addresses:**
+**Three payable addresses and the owner:**
 - address payable employee_one;
 - address payable employee_two;
 - address payable employee_three;
+- address payable owner;
 
 **function balance():**
 - return the contract's current balance
@@ -25,10 +26,21 @@ This contract will accept Ether into the contract and divide the Ether evenly am
 
 ### Test the contract
 
-Deployed the contract to my local Ganache chain by connecting to `Injected Web3` and ensuring MetaMask is pointed to `localhost:8545`.
+**Deployed the contract to my local Ganache:**
 
-![Local Host](Images/localHost_test.png)
+![Contract](Images/contract_deployment.png)
 
-<br /> 
+**Address balancess before the transaction:**
+- HR/Owner: 0x7dEDacdA430FAcABE043D455F52fc43D9F44128A
+- Employee 1: 0x0a376e0438880dbA4Cb6f34547bF9310D631A3ac
+- Employee 2: 0x4B2785a3dF23B0A25451812109f4bd2BcB990d79
+- Employee 3: 0x0f084d4BD3A110E8f7f8292476A713592152878F
 
-### Deploy the contracts to a live Testnet
+![Before](Images/balance_before.png)
+
+**Transaction amount: split 30ETH among the 3 employees**
+![Transaction](Images/transaction_amount.png)
+
+**Address balancess after the transaction:**
+- HR reduced 30 ETH and the employees gained 10 ETH each.
+![After](Images/after_balance.png)
