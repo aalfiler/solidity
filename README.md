@@ -4,7 +4,7 @@ This contract will accept Ether into the contract and divide the Ether evenly am
 
 <br/>
 
-### Data Dictionary:
+## Data Dictionary:
 **Three payable addresses and the owner:**
 - address payable employee_one;
 - address payable employee_two;
@@ -24,13 +24,15 @@ This contract will accept Ether into the contract and divide the Ether evenly am
 
 <br/>
 
-### Test the contract
+## Test the contract:
 
-**Deployed the contract to my local Ganache:**
+### Deployed the contract to my local Ganache
 
 ![Contract](Images/contract_deployment.png)
 
-**Address balancess before the transaction:**
+<br/>
+
+### Balancess before the transaction:
 - HR/Owner: 0x7dEDacdA430FAcABE043D455F52fc43D9F44128A
 - Employee 1: 0x0a376e0438880dbA4Cb6f34547bF9310D631A3ac
 - Employee 2: 0x4B2785a3dF23B0A25451812109f4bd2BcB990d79
@@ -38,9 +40,15 @@ This contract will accept Ether into the contract and divide the Ether evenly am
 
 ![Before](Images/balance_before.png)
 
-**Transaction amount: split 30ETH among the 3 employees**
+<br/>
+
+### Transaction amount: (split 30 ETH among the 3 employees)
+
 ![Transaction](Images/transaction_amount.png)
 
-**Address balancess after the transaction:**
+<br/>
+
+### Balancess after the transaction:
 - HR reduced 30 ETH and the employees gained 10 ETH each.
+
 ![After](Images/after_balance.png)
