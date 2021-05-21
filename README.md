@@ -1,4 +1,4 @@
-# Level One: Associate Profit Splitter
+# Associate Profit Splitter
 
 This contract will accept Ether into the contract and divide the Ether evenly among three associate level employees. This will allow the Human Resources department to pay employees quickly and efficiently.
 
